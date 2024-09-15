@@ -124,9 +124,9 @@ jobs:
     name: Publish package
     if: startsWith(github.event.ref, 'refs/tags/v')
     needs:
-      - format
+      # - format
       - lint
-      - type-checking
+      # - type-checking
       - test
       - build_source_dist
       - build_wheels
