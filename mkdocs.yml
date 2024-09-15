@@ -1,0 +1,79 @@
+site_name: Pacoteira do Verao
+
+theme:
+  name: material
+  # NOTE: put your logo here (https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#logo-icon-bundled)
+  # icon:
+  #   logo: material/library
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - navigation.tracking
+    - navigation.instant
+    - navigation.tabs.sticky
+    - navigation.footer
+    - navigation.expand
+    - content.tabs.link
+    - content.code.copy
+    - content.code.select
+  language: en
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+      primary: teal
+      accent: purple 
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode    
+      primary: teal
+      accent: lime
+
+plugins:
+  - search
+  - social
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            docstring_style: sphinx
+            docstring_options:
+              show_if_no_docstring: true
+            show_source: true
+  - markdown-exec
+
+nav:
+  - Home: index.md
+  - Code reference:
+    - main: reference/main.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/LucianoBatista
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+
+copyright: |
+  &copy; 2024 <a href="https://github.com/LucianoBatista"  target="_blank" rel="noopener">Luba</a>
