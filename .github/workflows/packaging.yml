@@ -34,7 +34,7 @@ jobs:
         run: python -m pip install tox
  
       - name: Run black
-        run: tox -e ruff_lint
+        run: tox -e ruff-lint
 
   type-checking:
     name: Check type-checking
@@ -125,7 +125,7 @@ jobs:
     if: startsWith(github.event.ref, 'refs/tags/v')
     needs:
       - format
-      - lint
+      - ruff_lint
       - type-checking
       - test
       - build_source_dist
