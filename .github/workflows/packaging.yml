@@ -125,7 +125,7 @@ jobs:
     if: startsWith(github.event.ref, 'refs/tags/v')
     needs:
       - format
-      - ruff_lint
+      - lint
       - type-checking
       - test
       - build_source_dist
