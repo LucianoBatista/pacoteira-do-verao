@@ -115,6 +115,8 @@ jobs:
 
         - name: Build wheels
           run: python -m cibuildwheel --output-dir wheels
+          env:
+            CIBW_BUILD: "*"
 
         - uses: actions/upload-artifact@v3
           with:
